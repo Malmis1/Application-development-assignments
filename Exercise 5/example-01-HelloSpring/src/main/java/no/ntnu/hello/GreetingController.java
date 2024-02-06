@@ -18,5 +18,10 @@ public class GreetingController {
   public String greeting() {
     return "Hei, World!";
   }
-}
 
+  @GetMapping("/hei")
+  public ResponseEntity<String> greeting2() {
+    ResponseEntity<String> response = new ResponseEntity(301);
+    return response;
+  }
+}
