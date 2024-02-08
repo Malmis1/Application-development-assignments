@@ -1,5 +1,7 @@
 package no.ntnu.hello;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,7 +23,7 @@ public class GreetingController {
 
   @GetMapping("/hei")
   public ResponseEntity<String> greeting2() {
-    ResponseEntity<String> response = new ResponseEntity(301);
+    ResponseEntity<String> response = new ResponseEntity("", HttpStatus.MOVED_PERMANENTLY);
     return response;
   }
 }
